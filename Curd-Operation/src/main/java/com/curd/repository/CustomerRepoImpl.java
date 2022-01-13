@@ -6,14 +6,13 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-@Repository
-public abstract class CustomerRepoImpl implements CustomerRepository{
 
-    @Autowired
-    CustomerRepository customerRepository;
+public interface CustomerRepoImpl extends CustomerRepository {
 
-    @Override
-    public List<Customer> findCustomer(String name) {
+  /*//  @Autowired
+  //  CustomerRepository customerRepository = null;
+    
+  // default List<Customer> findCustomer(String name) {
         return customerRepository.findCustomer(name);
-    }
+    }*/
 }

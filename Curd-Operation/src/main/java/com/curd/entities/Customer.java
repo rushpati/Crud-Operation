@@ -1,15 +1,17 @@
 package com.curd.entities;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import org.springframework.stereotype.Component;
 
-@Entity
+import javax.persistence.*;
+
+//@Entity
+//@Table(name = "CUSTOMER")
+
+@Component
 public class Customer {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+  //  @Id
+ //   @GeneratedValue(strategy = GenerationType.AUTO)
     private  int id;
     private  String name;
     private  String Last_name;

@@ -8,11 +8,8 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-@Repository
-public interface CustomerRepository extends CrudRepository<Customer,Integer> {
 
-
+public interface CustomerRepository  {
     @Query(value = "SELECT * FROM CUSTOMER WHERE NAME=?1", nativeQuery = true)
     List<Customer> findCustomer(String name);
-
 }

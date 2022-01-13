@@ -10,19 +10,19 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "/customer")
+@RequestMapping(value = "/custo")
 public class CustomerController {
 
-    @Autowired
-    CustomerRepoImpl customerRepo;
+ //   @Autowired(required = true)
+ //   CustomerRepoImpl customerRepo;
 
     @GetMapping(value ="get/customer/{id}")
     public void findCuster(@PathVariable("id") String name){
         System.out.println("name coming from user " +  name);
 
 
-        List names = customerRepo.findCustomer(name);
-        names.stream().forEach(s-> System.out.println(s));
+     //   List names = customerRepo.findCustomer(name);
+       // names.stream().forEach(s-> System.out.println(s));
 
     }
 }
